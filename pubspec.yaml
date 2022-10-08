@@ -1,0 +1,11 @@
+name: sqflite_entities_annotations
+description: sqflite entities annotations
+version: 0.0.1
+homepage:
+publish_to: none
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dev_dependencies:
+  flutter_lints: ^2.0.1
