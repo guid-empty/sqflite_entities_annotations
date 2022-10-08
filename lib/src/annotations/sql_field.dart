@@ -40,10 +40,16 @@ class SqlField<TIn, TOut> {
   ///
   final DataConverter<TIn, TOut>? toRawData;
 
+  ///
+  /// This field used to mark field as auto incremented
+  ///
+  final bool isAutoIncrement;
+
   const SqlField({
     required this.fieldName,
     this.fieldType = SqlFieldType.text,
     this.isPrimaryKey = false,
+    this.isAutoIncrement = false,
     this.defaultValueExpression,
     this.fromRawData,
     this.toRawData,
