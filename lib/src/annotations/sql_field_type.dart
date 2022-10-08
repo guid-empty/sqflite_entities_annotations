@@ -1,3 +1,11 @@
+///
+/// Sqlite Field Type to specify a format use to store some model property;
+/// Keep in the mind that you can specify some converter function to transform data from/to Model/Sqlite
+/// using the [SqlField.toRawData] / [SqlField.fromRawData];
+///
+/// See more details about Sqlite Data types
+/// https://www.sqlite.org/datatype3.html
+///
 class SqlFieldType {
   static const SqlFieldType integer = SqlFieldType._('INTEGER');
   static const SqlFieldType real = SqlFieldType._('REAL');
