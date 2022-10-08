@@ -9,7 +9,7 @@ typedef DataConverter<TIn, TOut> = TOut Function(TIn);
 /// Use can specify some additional fields using the [SqlEntityDefinition.fields] property,
 /// if you want to save not only model fields (see more details in [SqlField])
 ///
-class SqlField {
+class SqlField<TIn, TOut> {
   ///
   /// This name will be used to create column name for current model property in resulting table
   ///
@@ -33,12 +33,12 @@ class SqlField {
   ///
   /// Converted function used to transform Sqlite data to Dart Type
   ///
-  final DataConverter? fromRawData;
+  final DataConverter<TIn, TOut>? fromRawData;
 
   ///
   /// Converted function used to transform Dart Type to Sqlite data
   ///
-  final DataConverter? toRawData;
+  final DataConverter<TIn, TOut>? toRawData;
 
   const SqlField({
     required this.fieldName,
